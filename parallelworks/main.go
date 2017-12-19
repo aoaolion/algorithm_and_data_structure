@@ -14,10 +14,9 @@ func dealWork(ch chan int, ch2 chan int) {
 	}
 }
 
-func prepre(id int, ch chan int) int {
+func prepre(id int, ch chan int) {
 	time.Sleep(time.Millisecond * 20)
 	ch <- id
-	return id
 }
 
 func after(ch2 chan int, wg *sync.WaitGroup) {
